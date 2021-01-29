@@ -24,6 +24,7 @@ function handleProductChange(quality, increase) {
   calculalateTotal();
 }
 
+// function for calculate
 function calculalateTotal() {
   const firstClassCount = getInput('first-class');
   const economyCount = getInput('economy');
