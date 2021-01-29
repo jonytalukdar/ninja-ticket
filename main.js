@@ -2,7 +2,7 @@ function handleProductChange(quality, increase) {
   const qualityInput = document.getElementById(quality + '-count');
   const qualityCount = getInput(quality);
   let qualityNewCount = 0;
-  // condition for increase decrease
+  // condition for increase and  decrease
   if (increase == true) {
     qualityNewCount = qualityCount + 1;
   }
@@ -38,6 +38,7 @@ function calculalateTotal() {
   document.getElementById('grand-total').innerText = grandTotal;
 }
 
+// function for getInput
 function getInput(quality) {
   const qualityInput = document.getElementById(quality + '-count').value;
   const qualityCount = parseInt(qualityInput);
