@@ -1,16 +1,23 @@
-function handleProductChange(isIncrease) {
-  const economyInput = document.getElementById('economy-count');
-  const economyCount = parseInt(economyInput.value);
-  //   const economyNewCount = economyCount - 1;
-  let economyNewCount = 0;
-  if (isIncrease == true) {
-    economyNewCount = economyCount + 1;
+function handleProductChange(quality, increase) {
+  const qualityInput = document.getElementById(quality + '-count');
+  const qualityCount = parseInt(qualityInput.value);
+  let qualityNewCount = 0;
+  // condition for increase decrease
+  if (increase == true) {
+    qualityNewCount = qualityCount + 1;
   }
-  if (isIncrease == false && economyCount > 0) {
-    economyNewCount = economyCount - 1;
+  if (increase == false && qualityCount > 0) {
+    qualityNewCount = qualityCount - 1;
   }
-  economyInput.value = economyNewCount;
+  qualityInput.value = qualityNewCount;
 
-  const economyTotalPrice = economyNewCount * 100;
-  document.getElementById('economy-total').innerText = economyTotalPrice;
+  // condition for price
+  let qualityTotal = 0;
+  if (quality == 'first-class') {
+    qualityTotal = qualityNewCount * 150;
+  }
+  if (quality == 'economy') {
+    qualityTotal = qualityNewCount * 100;
+  }
+  document.getElementById(quality + '-total').innerText = qualityTotal;
 }
