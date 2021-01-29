@@ -69,13 +69,14 @@
                     <p>+ -</p>
                 </div>
             </div>
+            <!-- economies section -->
                 <div class="input-group f-class">
                     <div>
-                        <label for="">Economy ($100)</label>
-                        <input class="inp-style inp-width" type="number" name="">
+                        <label for="">Economy $<span id="economy-total">100</span> </label>
+                        <input id="economy-count" class="inp-style inp-width" type="number" name="" value="1">
                     </div>
                     <div class="plus-minus-btn">
-                        <p> <span>+</span> <span>-</span> </p>
+                        <p> <span id="economy-increase">+</span> <span id="economy-decrease"> - </span> </p>
                     </div>
                 </div>
 
@@ -113,6 +114,7 @@
     </main>
 
     <!--Thank You-->
+    <script src="main.js"></script>
 </body>
 
 </html>
