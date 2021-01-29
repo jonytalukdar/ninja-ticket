@@ -28,11 +28,14 @@ function calculalateTotal() {
   const firstClassCount = getInput('first-class');
   const economyCount = getInput('economy');
 
-  //   const economyInput = document.getElementById('economy-count').value;
-  //   const economyCount = parseInt(economyInput);
-
   const totalPrice = firstClassCount * 150 + economyCount * 100;
   document.getElementById('sub-total').innerText = totalPrice;
+
+  const tax = totalPrice * 0.1;
+  document.getElementById('tax-amount').innerText = tax;
+
+  const grandTotal = totalPrice + tax;
+  document.getElementById('grand-total').innerText = grandTotal;
 }
 
 function getInput(quality) {
