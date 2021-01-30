@@ -21,7 +21,7 @@ function handleQualityChange(quality, increase) {
   }
 
   document.getElementById(quality + '-total').innerText = qualityTotal;
-  calculalateTotal();
+  calculalateTotal('sub-total', 'tax-amount', 'grand-total');
 }
 
 // function for confirmation message
@@ -40,29 +40,22 @@ function confirmMessage() {
   const totalEconomyPrice = economyNewCount * 100;
   document.getElementById('economy-price').innerText = totalEconomyPrice;
 
-  const subTotalPrice = firstClassNewCount * 150 + economyNewCount * 100;
-  document.getElementById('sub-total-price').innerText = subTotalPrice;
-
-  const tax = subTotalPrice * 0.1;
-  document.getElementById('tax-price').innerText = tax;
-
-  const grandTotalPrice = subTotalPrice + tax;
-  document.getElementById('grand-total-price').innerText = grandTotalPrice;
+  calculalateTotal('sub-total-price', 'tax-price', 'grand-total-price');
 }
 
 // function for calculate price
-function calculalateTotal() {
+function calculalateTotal(subTotal, taxTotal, grandTotal) {
   const firstClassCount = getInput('first-class');
   const economyCount = getInput('economy');
 
   const totalPrice = firstClassCount * 150 + economyCount * 100;
-  document.getElementById('sub-total').innerText = totalPrice;
+  document.getElementById(subTotal).innerText = totalPrice;
 
   const tax = totalPrice * 0.1;
-  document.getElementById('tax-amount').innerText = tax;
+  document.getElementById(taxTotal).innerText = tax;
 
-  const grandTotal = totalPrice + tax;
-  document.getElementById('grand-total').innerText = grandTotal;
+  const grandTotalPrice = totalPrice + tax;
+  document.getElementById(grandTotal).innerText = grandTotalPrice;
 }
 
 // function for getInput value
