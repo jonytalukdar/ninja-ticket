@@ -21,7 +21,8 @@ function handleQualityChange(quality, increase) {
   }
 
   document.getElementById(quality + '-total').innerText = qualityTotal;
-  calculalateTotal('sub-total', 'tax-amount', 'grand-total');
+  // call calculate function
+  calculateTotal('sub-total', 'tax-amount', 'grand-total');
 }
 
 // function for confirmation message
@@ -40,11 +41,12 @@ function confirmMessage() {
   const totalEconomyPrice = economyNewCount * 100;
   document.getElementById('economy-price').innerText = totalEconomyPrice;
 
-  calculalateTotal('sub-total-price', 'tax-price', 'grand-total-price');
+  // call calculate function
+  calculateTotal('sub-total-price', 'tax-price', 'grand-total-price');
 }
 
 // function for calculate price
-function calculalateTotal(subTotal, taxTotal, grandTotal) {
+function calculateTotal(subTotal, taxTotal, grandTotal) {
   const firstClassCount = getInput('first-class');
   const economyCount = getInput('economy');
 
