@@ -1,4 +1,4 @@
-function handleProductChange(quality, increase) {
+function handleQualityChange(quality, increase) {
   const qualityInput = document.getElementById(quality + '-count');
   const qualityCount = getInput(quality);
   let qualityNewCount = 0;
@@ -47,9 +47,9 @@ function getInput(quality) {
 }
 
 function confirmChange() {
-  document.getElementById('main').style.display = 'none';
-  document.getElementById('header').style.display = 'none';
-  document.getElementById('confirmation-details').style.display = 'block';
+  // document.getElementById('main').style.display = 'none';
+  // document.getElementById('header').style.display = 'none';
+  // document.getElementById('confirmation-details').style.display = 'block';
 
   const firstClassCount = document.getElementById('first-class-count');
   const firstClassNewCount = parseInt(firstClassCount.value);
