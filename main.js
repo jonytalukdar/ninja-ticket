@@ -1,8 +1,9 @@
+// function for handle quality change
 function handleQualityChange(quality, increase) {
   const qualityInput = document.getElementById(quality + '-count');
   const qualityCount = getInput(quality);
+
   let qualityNewCount = 0;
-  // condition for increase and  decrease
   if (increase == true) {
     qualityNewCount = qualityCount + 1;
   }
@@ -11,7 +12,6 @@ function handleQualityChange(quality, increase) {
   }
   qualityInput.value = qualityNewCount;
 
-  // condition for price
   let qualityTotal = 0;
   if (quality == 'first-class') {
     qualityTotal = qualityNewCount * 150;
@@ -19,33 +19,12 @@ function handleQualityChange(quality, increase) {
   if (quality == 'economy') {
     qualityTotal = qualityNewCount * 100;
   }
-  document.getElementById(quality + '-total').innerText = qualityTotal;
 
+  document.getElementById(quality + '-total').innerText = qualityTotal;
   calculalateTotal();
 }
 
-// function for calculate
-function calculalateTotal() {
-  const firstClassCount = getInput('first-class');
-  const economyCount = getInput('economy');
-
-  const totalPrice = firstClassCount * 150 + economyCount * 100;
-  document.getElementById('sub-total').innerText = totalPrice;
-
-  const tax = totalPrice * 0.1;
-  document.getElementById('tax-amount').innerText = tax;
-
-  const grandTotal = totalPrice + tax;
-  document.getElementById('grand-total').innerText = grandTotal;
-}
-
-// function for getInput
-function getInput(quality) {
-  const qualityInput = document.getElementById(quality + '-count').value;
-  const qualityCount = parseInt(qualityInput);
-  return qualityCount;
-}
-
+// function for confirmation message
 function confirmMessage() {
   const firstClassCount = document.getElementById('first-class-count');
   const firstClassNewCount = parseInt(firstClassCount.value);
@@ -69,4 +48,26 @@ function confirmMessage() {
 
   const grandTotalPrice = subTotalPrice + tax;
   document.getElementById('grand-total-price').innerText = grandTotalPrice;
+}
+
+// function for calculate price
+function calculalateTotal() {
+  const firstClassCount = getInput('first-class');
+  const economyCount = getInput('economy');
+
+  const totalPrice = firstClassCount * 150 + economyCount * 100;
+  document.getElementById('sub-total').innerText = totalPrice;
+
+  const tax = totalPrice * 0.1;
+  document.getElementById('tax-amount').innerText = tax;
+
+  const grandTotal = totalPrice + tax;
+  document.getElementById('grand-total').innerText = grandTotal;
+}
+
+// function for getInput value
+function getInput(quality) {
+  const qualityInput = document.getElementById(quality + '-count').value;
+  const qualityCount = parseInt(qualityInput);
+  return qualityCount;
 }
