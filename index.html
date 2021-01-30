@@ -13,7 +13,8 @@
     <link rel="stylesheet" href="style.css">
   
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-giJF6kkoqNQ00vy+HMDP7azOuL0xtbfIcaT9wjKHr8RbDVddVHyTfAAsrekwKmP1" crossorigin="anonymous">
-
+    
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
 
 </head>
 
@@ -71,7 +72,7 @@
                     <input id="first-class-count" class="inp-style inp-width" type="number" name="" value="1">
                 </div>
                 <div class="plus-minus-btn">
-                    <p> <span onclick="handleQualityChange('first-class' , true);" id="first-class-increase">+</span> <span onclick="handleQualityChange('first-class',false);" id="first-class-decrease"> - </span> </p>
+                    <p> <span onclick="handleQualityChange('first-class',false);" id="first-class-decrease"> - </span> <span onclick="handleQualityChange('first-class' , true);" id="first-class-increase">+</span> </p>
                 </div>
             </div>
             <!-- economies section -->
@@ -81,7 +82,7 @@
                         <input id="economy-count" class="inp-style inp-width" type="number" name="" value="1">
                     </div>
                     <div class="plus-minus-btn">
-                        <p> <span onclick="handleQualityChange('economy' , true);" id="economy-increase">+</span> <span onclick="handleQualityChange('economy',false);" id="economy-decrease"> - </span> </p>
+                        <p>  <span onclick="handleQualityChange('economy',false);" id="economy-decrease"> - </span> <span onclick="handleQualityChange('economy' , true);" id="economy-increase">+</span> </p>
                     </div>
                 </div>
 
@@ -119,40 +120,28 @@
 
         
     </main>
-
-    <!-- <div id="confirmation-details">
-        <h1>Booking successful</h1>
-        <p>Your First Class Ticket is: <span id="first-class-ticket">00</span></p>
-        <p>Your First Economy Ticket is: <span id="economy-ticket">00</span> </p>
-        <p>Your First Class Ticket Price is: $<span id="first-class-price"></span>  </p>
-        <p>Your Economy Ticket Price is: $<span id="economy-price">00</span> </p>
-        <p>Your SubTotal Price Is $ <span id="sub-total-price">00</span></p>
-        <p>Your Tax Price Is $ <span id="tax-price">00</span></p>
-        <p>Your Grand Total Price Is $ <span id="grand-total-price">00</span></p>
-        <span id="some"></span>
-    </div> -->
-
     
+    <!-- modal -->
     <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
         <div class="modal-dialog">
           <div class="modal-content">
             <div class="modal-header">
-              <h5 class="modal-title" id="exampleModalLabel">Modal title</h5>
+              <h5 class="modal-title" id="exampleModalLabel">Booking Successful</h5>
               <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
             </div>
             <div class="modal-body">
-                <h1>Booking successful</h1>
+                <h1 class="text-center">Booking successful</h1>
                 <p>Your First Class Ticket is: <span id="first-class-ticket">00</span></p>
                 <p>Your First Economy Ticket is: <span id="economy-ticket">00</span> </p>
-                <p>Your First Class Ticket Price is: $<span id="first-class-price"></span>  </p>
-                <p>Your Economy Ticket Price is: $<span id="economy-price">00</span> </p>
-                <p>Your SubTotal Price Is $ <span id="sub-total-price">00</span></p>
-                <p>Your Tax Price Is $ <span id="tax-price">00</span></p>
-                <p>Your Grand Total Price Is $ <span id="grand-total-price">00</span></p>
+                <p>Your First Class Ticket Price is: $ <span id="first-class-price"></span>  </p>
+                <p>Your Economy Ticket Price is: $ <span id="economy-price">00</span> </p>
+                <p>Your SubTotal Price is: $ <span id="sub-total-price">00</span></p>
+                <p>Your Tax Price is: $ <span id="tax-price">00</span></p>
+                <p>Your Grand Total Price is: $ <span id="grand-total-price">00</span></p>
             </div>
-            <!-- <div class="modal-footer">
+            <div class="modal-footer">
               <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
-            </div> -->
+            </div>
           </div>
         </div>
       </div>
