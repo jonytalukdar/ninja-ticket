@@ -46,7 +46,7 @@ function getInput(quality) {
   return qualityCount;
 }
 
-function confirmChange() {
+function confirmMessage() {
   const firstClassCount = document.getElementById('first-class-count');
   const firstClassNewCount = parseInt(firstClassCount.value);
   document.getElementById('first-class-ticket').innerText = firstClassNewCount;
