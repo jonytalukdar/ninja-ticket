@@ -68,19 +68,17 @@ a.active {
   width: 80%;
   margin: 50px 0px 0px 80px;
 }
-/* .booking-form h3 {
-  margin: 10px 0px;
-} */
-/* .booking-form .input-group {
-  margin: 10px 0;
-} */
-/* .booking-form .calculations {
-  margin: 10px 0;
-} */
-/* .booking-form .calculations p {
+.booking-form h3 {
+  margin: 5px 0px;
+}
+.booking-form .input-group {
+  margin: 5px 0;
+}
+
+.booking-form .calculations p {
   font-weight: 500;
   margin-bottom: 10px;
-} */
+}
 .booking-form input {
   width: 100%;
   display: block;
@@ -108,7 +106,6 @@ a.active {
   color: #3352f2;
   font-size: 30px;
   padding: 2px;
-  /* margin: 10px 10px 5px 5px; */
   margin-top: 20px;
   word-spacing: 20px;
 }
@@ -158,4 +155,9 @@ a.active {
 span {
   font-weight: bold;
   color: #3352f2;
+}
+
+span .fas {
+  display: block;
+  text-align: center;
 }
