@@ -21,7 +21,7 @@ function handleQualityChange(quality, increase) {
   }
 
   document.getElementById(quality + '-total').innerText = qualityTotal;
-  // call calculate function
+  // invoke calculate function
   calculateTotal('sub-total', 'tax-amount', 'grand-total');
 }
 
@@ -41,7 +41,7 @@ function confirmMessage() {
   const totalEconomyPrice = economyNewCount * 100;
   document.getElementById('economy-price').innerText = totalEconomyPrice;
 
-  // call calculate function
+  // invoke calculate function
   calculateTotal('sub-total-price', 'tax-price', 'grand-total-price');
 }
 

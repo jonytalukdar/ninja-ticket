@@ -67,10 +67,12 @@
             <div class="inputs">
                 <!-- first class section -->
                 <div class="input-group f-class">
+                    <!-- plus minus button -->
                 <div>
                     <label for="">First Class  $(<span id="first-class-total">150</span>)</label>
                     <input id="first-class-count" class="inp-style inp-width" type="number" name="" value="1">
                 </div>
+                <!-- plus minus button -->
                 <div class="plus-minus-btn">
                     <p> <span onclick="handleQualityChange('first-class',false);" id="first-class-decrease"> - </span> <span onclick="handleQualityChange('first-class' , true);" id="first-class-increase">+</span> </p>
                 </div>
@@ -87,6 +89,7 @@
                 </div>
 
             </div>
+            <!-- calculation section -->
             <div class="calculations">
                 <div class="amount">
                     <div class="left">
@@ -115,6 +118,7 @@
                     </div>
                 </div>
             </div>
+            <!-- confirmation message button -->
             <button onclick="confirmMessage()" id="booking-button" class="btn-style"  data-bs-toggle="modal" data-bs-target="#exampleModal" >Book Now</button>
         </div>
 
