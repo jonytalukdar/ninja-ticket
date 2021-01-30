@@ -45,3 +45,32 @@ function getInput(quality) {
   const qualityCount = parseInt(qualityInput);
   return qualityCount;
 }
+
+function confirmChange() {
+  document.getElementById('main').style.display = 'none';
+  document.getElementById('header').style.display = 'none';
+  document.getElementById('confirmation-details').style.display = 'block';
+
+  const firstClassCount = document.getElementById('first-class-count');
+  const firstClassNewCount = parseInt(firstClassCount.value);
+  document.getElementById('first-class-ticket').innerText = firstClassNewCount;
+
+  const totalFirstPrice = firstClassNewCount * 150;
+  document.getElementById('first-class-price').innerText = totalFirstPrice;
+
+  const economyCount = document.getElementById('economy-count');
+  const economyNewCount = parseInt(economyCount.value);
+  document.getElementById('economy-ticket').innerText = economyNewCount;
+
+  const totalEconomyPrice = economyNewCount * 100;
+  document.getElementById('economy-price').innerText = totalEconomyPrice;
+
+  const subTotalPrice = firstClassNewCount * 150 + economyNewCount * 100;
+  document.getElementById('sub-total-price').innerText = subTotalPrice;
+
+  const tax = subTotalPrice * 0.1;
+  document.getElementById('tax-price').innerText = tax;
+
+  const grandTotalPrice = subTotalPrice + tax;
+  document.getElementById('grand-total-price').innerText = grandTotalPrice;
+}

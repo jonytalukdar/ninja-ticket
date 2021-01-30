@@ -15,7 +15,7 @@
 
 <body>
     <!--Header and Menu Section-->
-    <header class="container">
+    <header id="header" class="container">
         <nav>
             <ul>
                 <li><a href="#">Home</a></li>
@@ -27,7 +27,7 @@
     </header>
 
     <!--Booking Section-->
-    <main class="main-content container">
+    <main id="main" class="main-content container">
 
         <div class="booking-content">
             <h1>Mega City Bus</h1>
@@ -110,9 +110,23 @@
                     </div>
                 </div>
             </div>
-            <button class="btn-style">Book Now</button>
+            <button onclick="confirmChange()" id="booking-button" class="btn-style">Book Now</button>
         </div>
+
+        
     </main>
+
+    <div id="confirmation-details">
+        <h1>Booking successful</h1>
+        <p>Your First Class Ticket is: <span id="first-class-ticket">00</span></p>
+        <p>Your First Economy Ticket is: <span id="economy-ticket">00</span> </p>
+        <p>Your First Class Ticket Price is: $<span id="first-class-price"></span>  </p>
+        <p>Your Economy Ticket Price is: $<span id="economy-price">00</span> </p>
+        <p>Your SubTotal Price Is $ <span id="sub-total-price">00</span></p>
+        <p>Your Tax Price Is $ <span id="tax-price">00</span></p>
+        <p>Your Grand Total Price Is $ <span id="grand-total-price">00</span></p>
+        <span id="some"></span>
+    </div>
 
     <!--Thank You-->
     <script src="main.js"></script>
